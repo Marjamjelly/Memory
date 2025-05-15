@@ -1,0 +1,73 @@
+/* General Dark Mode Styling */
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+/* Game Board Grid */
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.tile {
+  width: 100%;
+  padding-top: 100%; /* Maintain square aspect ratio */
+  position: relative;
+  background-color: #333;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tile.active {
+  background-color: #4caf50;
+}
+
+.tile:after {
+  content: '';
+  display: block;
+  padding-bottom: 100%; /* Maintain square aspect ratio */
+}
+
+/* Controls */
+.controls {
+  margin-top: 20px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#level-display {
+  margin-top: 10px;
+  font-size: 18px;
+}
